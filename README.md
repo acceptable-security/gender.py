@@ -10,3 +10,7 @@ A simple library to take first names and return their gender using the genderize
 ##Output
 
 Output is a list of results form the website, formated to be (name (string), probability (string), population (int))
+
+##Requirements
+
+Requires requests to function for HTTP requests.
