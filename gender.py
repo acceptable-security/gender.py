@@ -22,4 +22,4 @@ def getGenders(names):
 	return retrn
 
 
-print getGenders(["Brian","Apple","Jessica","Poop"])
+print getGenders(["Brian","Apple","Jessica","Zaeem","NotAName"])
