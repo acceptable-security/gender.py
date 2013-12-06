@@ -9,7 +9,7 @@ A simple library to take first names and return their gender using the genderize
 
 ##Output
 
-Output is a list of results form the website, formated to be (name (string), probability (string), population (int))
+Output is a list of results form the website, formated to be (name (string), probability (string), amount of documents that support the gender choice (int))
 
 ##Requirements
 
