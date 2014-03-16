@@ -21,5 +21,5 @@ def getGenders(names):
 			retrn.append((u'None',u'0.0',0.0))
 	return retrn
 
-
-print getGenders(["Brian","Apple","Jessica","Zaeem","NotAName"])
+if __name__ == '__main__':
+	print getGenders(["Brian","Apple","Jessica","Zaeem","NotAName"])
