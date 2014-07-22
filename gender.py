@@ -7,8 +7,9 @@ def getGenders(names):
 		if url == "":
 			url = "name[0]=" + name
 		else:
+			cnt += 1
 			url = url + "&name[" + str(cnt) + "]=" + name
-		cnt += 1
+		
 
 	req = requests.get("http://api.genderize.io?" + url)
 	results = json.loads(req.text)
