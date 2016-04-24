@@ -3,6 +3,9 @@ import requests, json
 def getGenders(names):
 	url = ""
 	cnt = 0
+	if not isinstance(names,list):
+		names = [names,]
+	
 	for name in names:
 		if url == "":
 			url = "name[0]=" + name
@@ -13,6 +16,8 @@ def getGenders(names):
 
 	req = requests.get("http://api.genderize.io?" + url)
 	results = json.loads(req.text)
+	if len(names)==1 :
+		results = [ results, ]
 	
 	retrn = []
 	for result in results:
@@ -23,4 +28,4 @@ def getGenders(names):
 	return retrn
 
 if __name__ == '__main__':
-	print getGenders(["Brian","Apple","Jessica","Zaeem","NotAName"])
+	print(getGenders(["Brian","Apple","Jessica","Zaeem","NotAName"]))
