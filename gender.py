@@ -14,10 +14,8 @@ def getGenders(names):
 			url = url + "&name[" + str(cnt) + "]=" + name
 		
 
-	req = requests.get("http://api.genderize.io?" + url)
+	req = requests.get("https://api.genderize.io?" + url)
 	results = json.loads(req.text)
-	if len(names)==1 :
-		results = [ results, ]
 	
 	retrn = []
 	for result in results:
